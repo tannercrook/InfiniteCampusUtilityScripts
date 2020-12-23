@@ -26,7 +26,7 @@ SELECT DISTINCT
 , CASE 
 	WHEN am.postOfficeBox = 1 
 		THEN CONCAT('PO Box ',COALESCE(am.number+' ',''), COALESCE(am.prefix+' ',''), COALESCE(am.street+' ',''), COALESCE(am.tag+' ',''), COALESCE(am.dir+' ',''), COALESCE(am.apt, ''))
-		ELSE CONCAT(COALESCE(am.number+' ',''), COALESCE(am.prefix+' ',''), COALESCE(am.street+' ',''), COALESCE(am.tag+' ',''), COALESCE(am.dir+' ',''), COALESCE(am.apt, ''))
+	ELSE CONCAT(COALESCE(am.number+' ',''), COALESCE(am.prefix+' ',''), COALESCE(am.street+' ',''), COALESCE(am.tag+' ',''), COALESCE(am.dir+' ',''), COALESCE(am.apt, ''))
   END AS "Mailing Address 1"
 , NULL AS "Mailing Address Line 2"
 , am.city AS "City"
